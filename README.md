@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 🎨 Polling System – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the **frontend implementation** of the Polling System Machine Test.  
+The frontend is built with **React.js** and provides the user interface for authentication, poll creation, voting, and result viewing.  
 
-## Available Scripts
+It connects with the [Polling System Backend](https://github.com/Rahmathullaaiman/polling_backend.git).
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Authentication**
+  - Login and Registration forms
+  - JWT token storage in local/session storage
+  - Automatic redirect on login/logout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Role-Based Views**
+  - **Admin Dashboard**
+    - Create new polls
+    - Edit/Delete polls while active
+    - Manage private poll participants
+  - **User Dashboard**
+    - View public polls
+    - Access private polls if invited
+    - Vote on active polls
+    - View results of expired polls
 
-### `npm test`
+- **Poll Management**
+  - Poll list with title, description, expiry timer
+  - Voting interface (single vote per poll)
+  - Expired poll badge with results view
+  - Real-time update of poll counts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
+- **Framework**: React.js (Create React App / Vite)
+- **UI**: Bootstrap / Tailwind CSS
+- **State Management**: React Context / Hooks
+- **HTTP Client**: Axios / Fetch API
+- **Authentication**: JWT stored in browser
+- **Backend**: [Nest.js API](https://github.com/Rahmathullaaiman/polling_backend.git)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ #### NOTE -
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This frontend was developed manually.
+ChatGPT was only used for:
 
-### `npm run eject`
+Improving UI/UX structure suggestions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+All code and logic (API integration, state management, UI) were written manually.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Project Structure
+src/
+├── components/ # Reusable UI components (PollCard, Forms, Navbar)
+├── pages/ # Login, Register, Dashboard, Poll Details
+├── context/ # User context (auth state, permissions)
+├── services/ # API calls (auth, polls)
+├── App.js # Main routing
+└── index.js # Entry point  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚙️ Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
+- Node.js v18+
+- npm or yarn
+- Backend running → [polling_backend](https://github.com/Rahmathullaaiman/polling_backend.git)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
+```bash
+# Clone repo
+git clone https://github.com/yourusername/polling_frontend.git
+cd polling_frontend
 
-### Code Splitting
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+📩 Submission
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+GitHub Repo: https://github.com/Rahmathullaaiman/polling_frontend.git
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Demo Recording: 

@@ -3,3 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Auth component styles */
+.auth-main-container {
+  width: 100%;
+  height: 80vh;
+}
+
+.auth-inner-container {
+  /* w-75 and container are Bootstrap, so nothing extra needed */
+}
+
+.auth-home-link {
+  color: blue;
+}
+
+.auth-bg {
+  /* bg-white and p-5 are Bootstrap, so nothing extra needed */
+}
+
+.auth-title-container {
+  margin-top: 2%;
+}
+
+.auth-image {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.auth-stack-icon {
+  color: white;
+}
+
+.auth-signup-title,
+.auth-signin-title {
+  color: black;
+  margin-left: -160%;
+}
+
+.auth-login-link-container {
+  margin-left: -50%;
+}
+
+.auth-login-link {
+  text-decoration: none;
+}

@@ -5,21 +5,6 @@ import Swal from 'sweetalert2';
 
 function Header() {
   const navigate = useNavigate();
-  const [showDashboardButton, setShowDashboardButton] = useState(true);
-  const [showHistoryButton, setShowHistoryButton] = useState(true);
-  const [isAdminUser, setIsAdminUser] = useState(false);
-
-  useEffect(() => {
-    const existUser = sessionStorage.getItem('existuser');
-    const adminUser = sessionStorage.getItem('adminuser');
-
-    if (existUser) {
-      setShowDashboardButton(false);
-    } else if (adminUser) {
-      setShowHistoryButton(false);
-      setIsAdminUser(true);
-    }
-  }, []); // Empty dependency array ensures this effect runs only once on mount
 
   const logout = () => {
     sessionStorage.removeItem('token');
@@ -42,10 +27,8 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto align-items-center fs-5 text-white">
-            {isAdminUser && (
-              <Button href="/users" style={{ border: '3px outset white', borderRadius: '10px', backgroundColor: 'white', textDecoration: 'none' }} className="text-black fw-bolder mx-3">USER LIST</Button>
-            )}
-            {showDashboardButton && (
+           
+           
               <>
                 <Button href="/dashboard" style={{ border: '3px outset white', borderRadius: '10px', backgroundColor: 'white', textDecoration: 'none' }} className="text-black fw-bolder mx-3">GO TO DASHBOARD</Button>
                 <Dropdown>
@@ -58,10 +41,9 @@ function Header() {
               </Dropdown.Menu>
             </Dropdown>
               </>
-            )}
-            {!isAdminUser && (
+           
               <Button href="/newdashboard" style={{ border: '3px outset white', borderRadius: '10px', backgroundColor: 'white', textDecoration: 'none' }} className="text-black fw-bolder mx-3">USER DASHBOARD</Button>
-            )}
+            
             <Dropdown>
               <Dropdown.Toggle variant="secondary" style={{ border: '3px outset white', borderRadius: '10px', backgroundColor: 'white', textDecoration: 'none' }} className="text-black fw-bolder mx-3">
                 PROPERTIES
@@ -71,7 +53,7 @@ function Header() {
                 <Dropdown.Item className='text-black fw-bolder' href="home">BUY</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            {showHistoryButton && (
+           
               <Dropdown>
                 <Dropdown.Toggle variant="secondary" style={{ border: '3px outset white', borderRadius: '10px', backgroundColor: 'white', textDecoration: 'none' }} className="text-black fw-bolder mx-3">
                   HISTORY
@@ -81,7 +63,7 @@ function Header() {
                   <Dropdown.Item className='text-black fw-bolder' href="renthistory">RENT PROPERTY</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-            )}
+            
             <Button onClick={logout} style={{ border: '3px outset white', borderRadius: '10px', backgroundColor: 'white', textDecoration: 'none' }} className="text-black fw-bolder mx-3">LOGOUT</Button>
           </Nav>
         </Navbar.Collapse>
