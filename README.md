@@ -34,8 +34,8 @@ It connects with the [Polling System Backend](https://github.com/Rahmathullaaima
 ---
 
 ## 🛠️ Tech Stack
-- **Framework**: React.js (Create React App / Vite)
-- **UI**: Bootstrap / Tailwind CSS
+- **Framework**: React.js 
+- **UI**: Bootstrap / Css
 - **State Management**: React Context / Hooks
 - **HTTP Client**: Axios / Fetch API
 - **Authentication**: JWT stored in browser
