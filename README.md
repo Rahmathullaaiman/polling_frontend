@@ -43,14 +43,14 @@ It connects with the [Polling System Backend](https://github.com/Rahmathullaaima
 
 ---
 
- #### NOTE -
+#### NOTE -
 
-This frontend was developed manually.
-ChatGPT was only used for:
-
-Improving UI/UX structure suggestions
-
+This frontend was developed manually.  
+ChatGPT was only used for **UI/UX structure suggestions**.  
+also helped to fix some bugs.
 All code and logic (API integration, state management, UI) were written manually.
+
+---
 
 ## 📂 Project Structure
 src/
@@ -59,7 +59,7 @@ src/
 ├── context/ # User context (auth state, permissions)
 ├── services/ # API calls (auth, polls)
 ├── App.js # Main routing
-└── index.js # Entry point  
+└── index.js # Entry point
 
 
 ---
@@ -74,15 +74,12 @@ src/
 ### Installation
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/polling_frontend.git
+git clone https://github.com/Rahmathullaaiman/polling_frontend.git
 cd polling_frontend
 
 # Install dependencies
 npm install
 
-
 📩 Submission
 
 GitHub Repo: https://github.com/Rahmathullaaiman/polling_frontend.git
-
-Demo Recording: 
